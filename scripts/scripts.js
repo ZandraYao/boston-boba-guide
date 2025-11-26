@@ -143,3 +143,13 @@ function initBrandsPage() {
 document.addEventListener("DOMContentLoaded", () => {
   initBrandsPage();
 });
+
+const modalNeighborhood = document.createElement("p");
+modalNeighborhood.textContent = "place " + brand.neighborhood;
+modalNeighborhood.className = "modal-location";
+modalDescription.insertAdjacentElement("beforebegin", modalNeighborhood);
+
+modalLinkBtn.onclick = () => {
+  const query = encodeURIComponent(brand.name + " Boston");
+  window.open(`https://www.google.com/maps/search/${query}`, "_blank");
+};
