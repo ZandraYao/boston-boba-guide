@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bubble Life – Brands</title>
+    <title>Bubble Life - Brands</title>
     <meta
       name="description"
       content="Browse Boston bubble tea brands, search and view details and menus."
@@ -12,87 +12,120 @@
     <link rel="stylesheet" href="styles/styles.css" />
     <script src="scripts/scripts.js" defer></script>
   </head>
-  <body class="page-brands">
-
-    <header class="site-header">
-      <div class="container nav-container">
-        <div class="logo">Bubble Life</div>
-        <nav class="main-nav">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="brands.html" class="nav-link active">Brands</a>
-          <a href="about.html" class="nav-link">About</a>
-        </nav>
+ <body>
+    <nav class="globalNav">
+      <div class="logoText">Bubble Life</div>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html" class="isActive">ABOUT</a></li>
+      </ul>
+    </nav>
+  <header class="heroHeader brandsHeader">
+        <h1>Boba Search</h1>
+  </header>
+  <div class="searchFilterBar">
+    <input type="text" placeholder="Search brands or flavors..." class="searchInput">
+    <button id="filterButton" class="ctaButton">Filter</button>
+      <div id="filterOptions" class="hidden">
+        <button class="filterOptionButton" data-location="All">All Locations</button>
+        <button class="filterOptionButton" data-location="Allston">Allston</button>
+        <button class="filterOptionButton" data-location="Chinatown">Chinatown</button>
+        <button class="filterOptionButton" data-location="Newbury">Newbury</button>
+        <button class="filterOptionButton" data-location="Cambridge">Cambridge</button>
       </div>
-    </header>
-
-    <main class="container brands-main">
-      <section class="brands-visual">
-        <div class="brand-logo">
-          <img src="images/boba-cups.png" alt="Bubble tea cups" />
-        </div>
-        <h1>Boston Bubble Life</h1>
-
-        <div class="search-filter-row">
-          <input
-            type="text"
-            id="searchInput"
-            placeholder="Search..."
-            aria-label="Search brands"
-          />
-          <select id="filterNeighborhood" aria-label="Filter by neighborhood">
-            <option value="all">All neighborhoods</option>
-            <option value="Allston">Allston</option>
-            <option value="Chinatown">Chinatown</option>
-            <option value="Fenway">Fenway</option>
-            <option value="Cambridge">Cambridge</option>
-          </select>
-        </div>
-      </section>
-
-      <section class="brands-grid-section">
-        <div id="brandGrid" class="brand-grid">
-        </div>
-        <p id="brandCount" class="count-text"></p>
-      </section>
-
-      <div id="brandModal" class="brand-modal hidden">
-        <div class="brand-modal-content">
-          <button id="modalClose" class="modal-close" aria-label="Close">✕</button>
-
-          <h2 id="modalName" class="modal-title"></h2>
-
-          <button id="modalLinkBtn" class="btn-primary modal-btn">
-            View Menu
-          </button>
-
-          <div class="modal-image-wrap">
-            <img id="modalLogo" alt="Brand logo" />
-          </div>
-
-          <p id="modalDescription" class="modal-text"></p>
-          <h3 class="modal-subtitle">Menu Highlights</h3>
-          <ul id="modalMenu" class="modal-menu"></ul>
-        </div>
-      </div>
-
-      <section id="brand-detail" class="brand-detail hidden">
-        <button id="backToGrid" class="back-btn">← Back to brands</button>
-
-        <div class="detail-card">
-          <div class="detail-logo-wrap">
-            <img id="detailLogo" alt="Brand logo" />
-          </div>
-          <h2 id="detailName"></h2>
-          <p id="detailDescription"></p>
-
-          <h3>Menu Highlights</h3>
-          <ul id="detailMenu"></ul>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <p>© 2025 Bubble Life · Boston Boba Guide</p>
-    </footer>
+    </div>
+  <main class="brandCardContainer" id="brandCards">
+    <div class="brandCard" data-id="heytea">
+      <div class="logoPlace">
+        <img class="brandLogo" src="images/heytea.png" alt="HEYTEA Logo">
+      </div> 
+      <h3 class="name">HEYTEA</h3> 
+      <p class="description">Known as the "Tea of Inspiration," famous for its cheese foam and fresh fruit teas, alongside innovative flavors.</p>
+      <button class="ctaButton" data-brand-id="heytea">
+        VIEW DETAILS
+      </button>
+    </div>
+    <div class="brandCard" data-id="tsaocaa">
+      <div class="logoPlace">
+        <img class="brandLogo" src="images/tsaocaa.png" alt="TSAOCAA Logo">
+      </div> 
+      <h3 class="name">TSAOCAA</h3> 
+      <p class="description">Focuses on a "Natural, Pure Tea" route, emphasizing origin tea leaves and traditional craftsmanship.</p>
+      <button class="ctaButton" data-brand-id="tsaocaa">
+        VIEW DETAILS
+      </button>
+    </div>
+    <div class="brandCard" data-id="chicha">
+      <div class="logoPlace">
+        <img class="brandLogo" src="images/chicha.jpg" alt="CHICHA San Chen Logo">
+      </div> 
+      <h3 class="name">CHICHA San Chen</h3> 
+      <p class="description">A high-end Taiwanese tea brand with 20+ years of experience, using the exclusive LION tea brewing machine.</p>
+      <button class="ctaButton" data-brand-id="chicha">
+        VIEW DETAILS
+      </button>
+    </div>
+    <div class="brandCard" data-id="gongcha">
+      <div class="logoPlace">
+        <img class="brandLogo" src="images/gongcha.png" alt="Gong Cha Logo">
+      </div> 
+      <h3 class="name">Gong Cha</h3> 
+      <p class="description">A classic Taiwanese global chain, renowned for its extensive customization options for sweetness and ice levels.</p>
+      <button class="ctaButton" data-brand-id="gongcha">
+        VIEW DETAILS
+      </button>
+    </div>
+    <div class="brandCard" data-id="machi">
+      <div class="logoPlace">
+        <img class="brandLogo" src="images/machi.jpg" alt="Machi Machi Logo">
+      </div> 
+      <h3 class="name">Machi Machi</h3> 
+      <p class="description">An internet-famous brand popularized by its bottled milk tea and unique "Cheese Foam + Handmade Boba" series.</p>
+      <button class="ctaButton" data-brand-id="machi">
+        VIEW DETAILS
+      </button>
+    </div>
+    <div class="brandCard" data-id="teazzi">
+      <div class="logoPlace">
+        <img class="brandLogo" src="images/teazzi.png" alt="Teazzi Tea Shop Logo">
+      </div> 
+      <h3 class="name">Teazzi Tea Shop</h3> 
+      <p class="description">A new Taiwanese tea brand emphasizing freshly brewed tea, high tea fragrance, and rich fruit and cheese foam teas.</p>
+      <button class="ctaButton" data-brand-id="teazzi">
+        VIEW DETAILS
+      </button>
+    </div>
+    <div class="brandCard" data-id="yifang">
+      <div class="logoPlace">
+        <img class="brandLogo" src="images/yifang.png" alt="Yi Fang Taiwan Fruit Tea Logo">
+      </div> 
+      <h3 class="name">Yi Fang Taiwan Fruit Tea</h3> 
+      <p class="description">A popular Taiwanese fruit tea brand known for simmering fruit jams using traditional methods, offering naturally sweet flavors.</p>
+      <button class="ctaButton" data-brand-id="yifang">
+        VIEW DETAILS
+      </button>
+    </div>
+    <div class="brandCard" data-id="zeroand">
+      <div class="logoPlace">
+        <img class="brandLogo" src="images/zeroand.png" alt="ZERO& Logo">
+      </div> 
+      <h3 class="name">ZERO&</h3> 
+      <p class="description">A renowned American fruit tea brand, famous for its innovative visual fruit and tea beverages using fresh fruit and coconut milk.</p>
+      <button class="ctaButton" data-brand-id="zeroand">
+        VIEW DETAILS
+      </button>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <p>© 2025 Bubble Life · Boston Boba Guide</p>
+  </footer>
+  <div id="modalContainer" class="hidden">
+    <div id="brandDetailsModal">
+      <button id="closeModalBtn">X</button>
+      <h2 id="modalBrandName"></h2>
+      <div id="modalContent"></div>
+    </div>
+  </div>
   </body>
 </html>
+
