@@ -14,19 +14,38 @@
   </head>
  <body>
     <nav class="globalNav">
-      <div class="logoText">Bubble Life</div>
       <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="about.html" class="isActive">ABOUT</a></li>
+        <li><a href="index.html" class="isActive">Bubble Life</a></li>
+        <li><a href="about.html" >ABOUT</a></li>
       </ul>
     </nav>
-  <header class="heroHeader brandsHeader">
-        <h1>Boba Search</h1>
+  <header class="finderCard">
+        <h1 class="finderTitle">Boston Bubble Tea Finder</h1>
+        <p class="finderSubtitle">Discover the best boba near you.</p>
   </header>
   <div class="searchFilterBar">
-    <input type="text" placeholder="Search brands or flavors..." class="searchInput">
-    <button id="filterButton" class="ctaButton">Filter</button>
-      <div id="filterOptions" class="hidden">
+    <button id="brandFilterButton" class="ctaButton searchCtaButton">Brand</button>
+      <div id="brandFilterOptions" class="hidden filterOptionsDropdown">
+        <button class="filterOptionButton" data-brand="All">All Brands</button>
+        <button class="filterOptionButton" data-brand="HEYTEA">HEYTEA</button>
+        <button class="filterOptionButton" data-brand="TSAOCAA">TSAOCAA</button>
+        <button class="filterOptionButton" data-brand="CHICHA San Chen">CHICHA San Chen</button>
+        <button class="filterOptionButton" data-brand="GONG CHA">GONG CHA</button>
+        <button class="filterOptionButton" data-brand="Machi Machi">Machi Machi</button>
+        <button class="filterOptionButton" data-brand="Teazzi Tea Shop">Teazzi Tea Shop</button>
+        <button class="filterOptionButton" data-brand="Yi Fang Taiwan Fruit Tea">Yi Fang Taiwan Fruit Tea</button>
+        <button class="filterOptionButton" data-brand="ZERO&">ZERO&</button>
+      </div>
+
+    <button id="flavorFilterButton" class="ctaButton searchCtaButton">Flavor</button>
+      <div id="flavorFilterOptions" class="hidden filterOptionsDropdown">
+        <button class="filterOptionButton" data-flavor="All">All Flavors</button>
+        <button class="filterOptionButton" data-flavor="Fruit tea">Fruit Tea</button>
+        <button class="filterOptionButton" data-flavor="Boba Tea">Boba Tea</button>
+        <button class="filterOptionButton" data-flavor="Milk Tea">Milk Tea</button>
+      </div>
+    <button id="locationFilterButton" class="ctaButton searchCtaButton">Location</button>
+      <div id="locationFilterOptions" class="hidden filterOptionsDropdown">
         <button class="filterOptionButton" data-location="All">All Locations</button>
         <button class="filterOptionButton" data-location="Allston">Allston</button>
         <button class="filterOptionButton" data-location="Chinatown">Chinatown</button>
@@ -47,10 +66,10 @@
     </div>
     <div class="brandCard" data-id="tsaocaa">
       <div class="logoPlace">
-        <img class="brandLogo" src="images/tsaocaa.png" alt="TSAOCAA Logo">
+        <img class="brandLogo" src="images/tsaocaa.jpg" alt="TSAOCAA Logo">
       </div> 
       <h3 class="name">TSAOCAA</h3> 
-      <p class="description">Focuses on a "Natural, Pure Tea" route, emphasizing origin tea leaves and traditional craftsmanship.</p>
+      <p class="description">Focuses on a "Natural, Pure Tea" route, emphasizing origin tea leaves and traditional tea craft, offering different combinations.</p>
       <button class="ctaButton" data-brand-id="tsaocaa">
         VIEW DETAILS
       </button>
@@ -77,7 +96,7 @@
     </div>
     <div class="brandCard" data-id="machi">
       <div class="logoPlace">
-        <img class="brandLogo" src="images/machi.jpg" alt="Machi Machi Logo">
+        <img class="brandLogo" src="images/machi.png" alt="Machi Machi Logo">
       </div> 
       <h3 class="name">Machi Machi</h3> 
       <p class="description">An internet-famous brand popularized by its bottled milk tea and unique "Cheese Foam + Handmade Boba" series.</p>
@@ -98,7 +117,7 @@
     <div class="brandCard" data-id="yifang">
       <div class="logoPlace">
         <img class="brandLogo" src="images/yifang.png" alt="Yi Fang Taiwan Fruit Tea Logo">
-      </div> 
+      </div>
       <h3 class="name">Yi Fang Taiwan Fruit Tea</h3> 
       <p class="description">A popular Taiwanese fruit tea brand known for simmering fruit jams using traditional methods, offering naturally sweet flavors.</p>
       <button class="ctaButton" data-brand-id="yifang">
@@ -110,20 +129,23 @@
         <img class="brandLogo" src="images/zeroand.png" alt="ZERO& Logo">
       </div> 
       <h3 class="name">ZERO&</h3> 
-      <p class="description">A renowned American fruit tea brand, famous for its innovative visual fruit and tea beverages using fresh fruit and coconut milk.</p>
+      <p class="description">A renowned American fruit tea brand, famous for its innovative fruit and tea beverages using fresh fruit and coconut milk.</p>
       <button class="ctaButton" data-brand-id="zeroand">
         VIEW DETAILS
       </button>
     </div>
   </main>
-  <footer class="site-footer">
-    <p>© 2025 Bubble Life · Boston Boba Guide</p>
-  </footer>
   <div id="modalContainer" class="hidden">
     <div id="brandDetailsModal">
       <button id="closeModalBtn">X</button>
       <h2 id="modalBrandName"></h2>
       <div id="modalContent"></div>
+      <a id="brandWebBtn"
+      href="#"
+      target="_blank"
+      class="webBtn">
+      VISIT WEBSITE
+      </a>
     </div>
   </div>
   </body>
