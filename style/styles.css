@@ -69,13 +69,15 @@ h3{
 }
 
 .globalNav{
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--bobaBrown);
   padding: 1rem 1.5rem;
   top: 0;
-  z-index: 50;
+  z-index: 100;
   color: var(--white);
 }
 .globalNav ul{
