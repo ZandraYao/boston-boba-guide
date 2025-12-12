@@ -265,6 +265,11 @@ h3{
   padding-bottom: 80px;
   text-align: center;
   min-height: 420px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.brandCard:hover {
+  transform: translateY(-3px) scale(1.03);
+  border: 2px solid var(--bobaBrown);
 }
 
 .logoPlace{
